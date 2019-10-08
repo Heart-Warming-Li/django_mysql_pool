@@ -81,9 +81,7 @@ class Database:
 
     # 非查询的sql,增删改
     def ExecNoQuery(self, *args, **kwargs):
-        cur = self._Getconnect()
-        print(args)
-        print(kwargs)
+        cur = self._Getconnect()        
         try:
             cur.execute(args[0],kwargs)
             self.conn.commit()
